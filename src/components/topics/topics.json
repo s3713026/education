@@ -6,12 +6,10 @@
   },
   "options": {},
   "attributes": {
-    "Content": {
-      "type": "component",
-      "repeatable": true,
-      "component": "topics.content"
-    },
     "Topic": {
+      "type": "string"
+    },
+    "Content": {
       "type": "component",
       "repeatable": true,
       "component": "topics.content"

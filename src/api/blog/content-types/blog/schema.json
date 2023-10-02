@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "course_lists",
+  "collectionName": "blogs",
   "info": {
-    "singularName": "course-list",
-    "pluralName": "course-lists",
-    "displayName": "CourseList",
+    "singularName": "blog",
+    "pluralName": "blogs",
+    "displayName": "Blog",
     "description": ""
   },
   "options": {
@@ -12,13 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "title": {
       "type": "string"
     },
     "description": {
       "type": "richtext"
     },
-    "image": {
+    "coverImage": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -29,18 +29,20 @@
         "audios"
       ]
     },
-    "Topic": {
-      "type": "component",
-      "repeatable": true,
-      "component": "topics.topics"
+    "blog_tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::blog-tag.blog-tag",
+      "inversedBy": "blogs"
     },
-    "type": {
+    "tag": {
       "type": "enumeration",
       "enum": [
-        "basic",
-        "moderate",
-        "advance",
-        "project"
+        "React",
+        "Angular",
+        "UI/UX",
+        "React Native",
+        "Ionic"
       ]
     }
   }

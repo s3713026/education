@@ -17,9 +17,9 @@
     "image": {
       "allowedTypes": [
         "images",
-        "files",
         "videos",
-        "audios"
+        "audios",
+        "files"
       ],
       "type": "media",
       "multiple": false,
